@@ -1,0 +1,966 @@
+#include <iostream>
+
+using namespace std;
+
+	//Ingrese las variables globales
+   string CDE, NE, CRMM, CRMeM;
+   char RESE, FAC;
+   int EFSS, EFCS, EFES, EFMS, EFCTS, EFIS, EFSO, EFCO, EFEO, EFMO, EFCTO, EFIO, EFSC, EFCC, EFEC, EFMC, EFCTC, EFIC, EFSCl, EFCCl, EFECl, EFMCl, EFCTCl, EFICl, EFSA, EFCA, EFEA, EFMA, EFCTA, EFIA, EFSV, EFCV, EFEV, EFMV, EFCTV, EFIV, EFSCh, EFCCh, EFECh, EFMCh, EFCTCh, EFICh, EFSB, EFCB, EFEB, EFMB, EFCTB, EFIB, Num, Num2;
+   float CDMF, TMMCR, TMMeCR, TCMTU;
+ 
+   	
+   int matricula_1  (int EFSS, int EFCS, int EFES, int EFMS, int EFCTS, int EFIS)
+   { 
+   		float CMSS, CMCS, CMES, CMMS, CMCTS, CMIS;
+   	//Calcular el total de costo de matrícula de cada Facultad
+   	    if (FAC =='a')
+   	    {
+   	    	EFSS=EFSS+1;
+   	    	CMSS=EFSS*CDMF;
+   	   		return CMSS;
+		}
+   	    else if (FAC =='b')
+   	    {
+		   	EFCS=EFCS+1;
+   	    	CMCS=EFCS*CDMF;
+   	    	return CMCS;
+		}
+   	    else if (FAC =='c')
+   	    {
+   	    	EFES=EFES+1;
+			CMES=EFES*CDMF;
+   	    	return CMES;
+		}   
+   	    else if (FAC == 'd')
+   	    {
+   	    	EFMS=EFMS+1;
+			CMMS=EFMS*CDMF;
+   	    	return CMMS;
+		}
+   	    else if (FAC == 'e')
+   	    {
+		    EFCTS=EFCTS+1;   
+   	        CMCTS=EFCTS*CDMF;
+   	    return CMCTS;
+   	   }
+   	    else if (FAC =='e')
+   	    {
+		EFIS=EFIS+1;   
+   	    CMIS=EFIS*CDMF;
+        return CMIS;
+		}
+}
+    float calculate1 (int EFSS, int EFCS, int EFES, int EFMS, int EFCTS, int EFIS, float CMSS, float CMCS, float CMES, float CMMS, float CMCTS, float CMIS)
+     {
+     	int CES;
+		float CMUS, PMS;
+   	   //Calcular el total de estudiantes en la Universidad
+   	     CES=EFSS+EFCS+EFES+EFMS+EFCTS+EFIS;
+   	     
+   	     //Calcular el total de costo de matrícula de la Universidad
+   	     CMUS=CMSS+CMCS+CMES+CMMS+CMCTS+CMIS;
+   	     
+   	     //Calcular el promedio de matricula
+   	     PMS=CMUS/CES;
+   	     
+   	     return CMUS;
+   	}   
+   
+   
+	
+   int matricula_2 (int EFSO, int EFCO, int EFEO, int EFMO, int EFCTO, int EFIO)
+	 {
+	 	float CMSO, CMCO, CMEO, CMMO, CMCTO, CMIO;
+   	//Calcular el total de costo de matrícula de cada Facultad
+   	    if (FAC=='a')
+   	    {
+		EFSO=EFSO+1;  
+   	    CMSO=EFSO*CDMF;
+   	    return CMSO;
+   	   } 
+   	    else if (FAC=='b')
+   	   { 
+   	    EFCO=EFCO+1;
+   	    CMCO=EFCO*CDMF;
+   	    return CMSO;
+   	   }
+   	    else if (FAC=='c')
+   	    {
+		EFEO=EFEO+1;   
+   	    CMEO=EFEO*CDMF;
+   	    return CMEO;
+   	   }
+   	    else if (FAC=='d')
+   	    {
+		EFMO=EFMO+1;  
+   	    CMMO=EFMO*CDMF;
+   	    return CMMO;
+   	   }
+   	    else if (FAC=='e')
+   	    {
+		EFCTO=EFCTO+1;   
+   	    CMCTO=EFCTO*CDMF;
+   	    return CMCTO;
+   	   }
+   	    else if (FAC=='f')
+   	    {
+		EFIO=EFIO+1;   
+   	    CMIO=EFIO*CDMF;
+   	    return CMIO;
+		   }
+}
+
+float calculate2 (int EFSO, int EFCO, int EFEO, int EFMO, int EFCTO, int EFIO, float CMSO, float CMCO , float CMEO, float CMMO, float CMCTO, float CMIO)
+{
+		//declarar variables
+		int CEO;
+		float CMUO, PMO;
+		
+   	   //Calcular el total de estudiantes en la Universidad
+   	     CEO=EFSO+EFCO+EFEO+EFMO+EFCTO+EFIO;
+   	     
+   	     //Calcular el total de costo de matrícula de la Universidad
+   	     CMUO=CMSO+CMCO+CMEO+CMMO+CMCTO+CMIO;
+   	     
+   	     //Calcular el promedio de matricula
+   	     PMO=CMUO/CEO;
+   	     
+   	     return CMUO;
+   }	     
+   
+	   
+	   
+   int matricula_3 (int EFSC, int EFCC, int EFEC, int EFMC, int EFCTC, int EFIC)
+   {
+      float CMSC, CMCC, CMEC, CMMC, CMCTC, CMIC;
+   	//Calcular el total de costo de matrícula de cada Facultad
+   	if (FAC=='a')
+   	{
+	    EFSC=EFSC+1;
+   	    CMSC=EFSC*CDMF;
+   	    return CMSC;
+   	 }   
+   	    else if (FAC=='b')
+   	    {
+		 EFCC=EFCC+1;  
+   	    CMCC=EFCC*CDMF;
+   	    return CMCC;
+   	}   
+   	    else if (FAC=='c')
+   	    {
+		EFEC=EFEC+1;   
+   	    CMEC=EFEC*CDMF;
+   	    return CMEC;
+    }
+	
+   	    else if (FAC=='d')
+   	    {
+		EFMC=EFMC+1;   
+   	    CMMC=EFMC*CDMF;
+   	    return CMMC;
+   	   }
+   	    else if (FAC=='e')
+   	    {
+		EFCTC=EFCTC+1;   
+   	    CMCTC=EFCTC*CDMF;
+   	    return CMCTC;
+   	   }
+   	    else if (FAC=='f')
+   	    {
+		EFIC=EFIC+1;   
+   	    CMIC=EFIC*CDMF;
+   	    return CMIC;
+		   }
+}
+    float calculate3 (int EFSC, int EFCC, int EFEC, int EFMC, int EFCTC, int EFIC, float CMSC, float CMCC, float CMEC, float CMMC, float CMCTC, float CMIC)
+{
+	    int CEC;
+	    float CMUC, PMC;
+   	   //Calcular el total de estudiantes en la Universidad
+   	     CEC=EFSC+EFCC+EFEC+EFMC+EFCTC+EFIC;
+   	     
+   	     //Calcular el total de costo de matrícula de la Universidad
+   	     CMUC=CMSC+CMCC+CMEC+CMMC+CMCTC+CMIC;
+   	     
+   	     //Calcular el promedio de matricula
+   	     PMC=CMUC/CEC;
+   	     
+   	     return CMUC;
+   	}    
+
+	 
+   int matricula_4 (int EFSCl, int EFCCl, int EFECl, int EFACl, int EFCTCl, int EFICl)
+   {
+   	 float CMSCl, CMCCl, CMECl, CMMCl, CMCTCl, CMICl;
+   	//Calcular el total de costo de matrícula de cada Facultad
+   	if (FAC=='a')
+   	{
+	    EFSCl=EFSCl+1;
+   	    CMSCl=EFSCl*CDMF;
+   	    return CMSCl;
+   	   }
+   	    else if (FAC=='b')
+   	    {
+		EFCCl=EFCCl+1;   
+   	    CMCCl=EFCCl*CDMF;
+   	    return CMCCl;
+   	   }
+   	    else if (FAC=='c')
+   	    {
+		EFECl=EFECl+1;   
+   	    CMECl=EFECl*CDMF;
+   	    return CMECl;
+   	   }
+   	    else if (FAC=='d')
+   	    {
+		EFMCl=EFMCl+1;   
+   	    CMMCl=EFMCl*CDMF;
+   	    return CMMCl;
+   	   }
+   	    else if (FAC=='e')
+   	    {
+		EFCTCl=EFCTCl+1;   
+   	   CMCTCl=EFCTCl*CDMF;
+   	    return CMCTCl;
+   	   }
+   	    else if (FAC=='f')
+   	    {
+		EFICl=EFICl+1;  
+   	    CMICl=EFICl*CDMF;
+   	    return CMICl;
+		}
+}
+ float calculate4 (int EFSCl, int EFCCl, int EFECl, int EFMCl, int EFCTCl, int EFICl, float CMSCl, float CMCCl, float CMECl, float CMMCl, float CMCTCl, float CMICl)
+{
+	     int CECl;
+	     float CMUCl, PMCl;
+   	   //Calcular el total de estudiantes en la Universidad
+   	     CECl=EFSCl+EFCCl+EFECl+EFMCl+EFCTCl+EFICl;
+   	     
+   	     //Calcular el total de costo de matrícula de la Universidad
+   	     CMUCl=CMSCl+CMCCl+CMECl+CMMCl+CMCTCl+CMICl;
+   	     
+   	     //Calcular el promedio de matricula
+   	     PMCl=CMUCl/CECl;
+   	     
+   	     return CMUCl;
+   	}
+   	
+   	
+	  
+	int matricula_5 (int EFSA, int EFCA, int EFEA, int EFMA, int EFCTA, int EFIA)
+	{
+		float CMSA, CMCA, CMEA, CMMA, CMCTA, CMIA;
+   	//Calcular el total de costo de matrícula de cada Facultad
+   	if (FAC=='a')
+   	{
+	    EFSA=EFSA+1;
+   	    CMSA=EFSA*CDMF;
+   	    return CMSA;
+   	    }
+   	    else if (FAC=='b')
+   	    {
+		EFCA=EFCA+1;   
+   	    CMCA=EFCA*CDMF;
+   	    return CMCA;
+   	   }
+   	    else if (FAC=='c')
+   	    {
+		EFEA=EFEA+1;   
+   	    CMEA=EFEA*CDMF;
+   	    return CMEA;
+   	   }
+   	    else if (FAC=='d')
+   	    {
+		EFMA=EFMA+1;  
+   	    CMMA=EFMA*CDMF;
+   	    return CMMA;
+   	    }
+   	    else if (FAC=='e')
+   	    {
+		EFCTA=EFCTA+1;   
+   	    CMCTA=EFCTA*CDMF;
+   	    return CMCTA;
+   	   }
+   	    else if (FAC=='f')
+   	    {
+		EFIA=EFIA+1;   
+   	    CMIA=EFIA*CDMF;
+   	    return CMIA;
+	    }
+}
+     float calculate5 (int EFSA, int EFCA, int EFEA, int EFMA, int EFCTA, int EFIA, float CMSA, float CMCA, float CMEA, float CMMA, float CMCTA, float CMIA)
+{
+	int CEA;
+	float CMUA, PMA;
+   	     //Calcular el total de estudiantes en la Universidad
+   	     CEA=EFSA+EFCA+EFEA+EFMA+EFCTA+EFIA;
+   	     
+   	     //Calcular el total de costo de matrícula de la Universidad
+   	     CMUA=CMSA+CMCA+CMEA+CMMA+CMCTA+CMIA;
+   	     
+   	     //Calcular el promedio de matricula
+   	     PMA=CMUA/CEA;
+   	     
+   	     return CMUA;
+   	    } 
+   
+      
+	  
+   float matricula_6 (int EFSV, int EFCV, int EFEV, int EFMV, int EFCTV, int EFIV)
+   {
+     float CMSV, CMCV, CMEV, CMMV, CMCTV, CMIV;
+   	//Calcular el total de costo de matrícula de cada Facultad
+   	if (FAC=='a')
+   	{
+	   EFSV=EFSV+1;
+   	    CMSV=EFSV*CDMF;
+   	    return CMSV;
+   	   }
+   	    else if (FAC=='b')
+   	    {
+		EFCV=EFCV+1;   
+   	    CMCV=EFCV*CDMF;
+   	    return CMCV;
+   	   }
+   	    else if (FAC=='c')
+   	    {
+		EFEV=EFEV+1;   
+   	    CMEV=EFEV*CDMF;
+   	    return CMEV;
+   	   }
+   	    else if (FAC=='d')
+   	    {
+		EFMV=EFMV+1;   
+   	    CMMV=EFMV*CDMF;
+   	    return CMMV;
+   	   }
+   	    else if (FAC=='e')
+   	    {
+		EFCTV=EFCTV+1;   
+   	    CMCTV=EFCTV*CDMF;
+   	    return CMCTV;
+   	   }
+   	    else if (FAC=='f')
+   	    {
+		EFIV=EFIV+1;   
+   	    CMIV=EFIV*CDMF;
+   	    return CMIV;
+		}
+}
+     float calculate6 (int EFSV, int EFCV, int EFEV, int EFMV, int EFCTV, int EFIV, float CMSV, float CMCV, float CMEV, float CMMV, float CMCTV, float CMIV)
+{
+	    int CEV;
+	    float CMUV, PMV;
+   	   //Calcular el total de estudiantes en la Universidad
+   	     CEV=EFSV+EFCV+EFEV+EFMV+EFCTV+EFIV;
+   	     
+   	     //Calcular el total de costo de matrícula de la Universidad
+   	     CMUV=CMSV+CMCV+CMEV+CMMV+CMCTV+CMIV;
+   	     
+   	     //Calcular el promedio de matricula
+   	     PMV=CMUV/CEV;
+   	     
+   	     return CMUV;
+   	}
+   
+	   
+	  
+   int matricula_7 (int EFSCh, int EFCCh, int EFECh, int EFMCh, int EFCTCh, int EFICh)
+   {
+     float CMSCh, CMCCh, CMECh, CMMCh, CMCTCh, CMICh;
+   	//Calcular el total de costo de matrícula de cada Facultad
+   	if (FAC=='a')
+   	{
+	   EFSCh=EFSCh+1;
+   	   CMSCh=EFSCh*CDMF;
+   	   return CMSCh;
+   	   }
+   	   else if (FAC=='b')
+   	   {
+		EFCCh=EFCCh+1; 
+   	   CMCCh=EFCCh*CDMF;
+   	   return CMCCh;
+   	   }
+   	   else if (FAC=='c')
+   	   {
+		EFECh=EFECh+1;  
+   	   CMECh=EFECh*CDMF;
+   	   return CMECh;
+   	   }
+   	   else if (FAC=='d')
+   	   {
+		EFMCh=EFMCh+1;  
+   	   CMMCh=EFMCh*CDMF;
+   	   return CMMCh;
+   	   }
+   	   else if (FAC=='e')
+   	   {
+		EFCTCh=EFCTCh+1;  
+   	   CMCTCh=EFCTCh*CDMF;
+   	   return CMCTCh;
+   	   }
+   	   else if (FAC=='f')
+   	   {
+		EFICh=EFICh+1;  
+   	   CMICh=EFICh*CDMF;
+   	   return CMICh;
+		}
+   }
+   float calculate7 (int EFSCh, int EFCCh, int EFECh, int EFMCh, int EFCTCh, int EFICh, float CMSCh, float CMCCh, float CMECh, float CMMCh, float CMCTCh, float CMICh)
+   {
+   	 int CECh;
+   	 float CMUCh, PMCh;
+   	   //Calcular el total de estudiantes en la Universidad
+   	     CECh=EFSCh+EFCCh+EFECh+EFMCh+EFCTCh+EFICh;
+   	     
+   	     //Calcular el total de costo de matrícula de la Universidad
+   	     CMUCh=CMSCh+CMCCh+CMECh+CMMCh+CMCTCh+CMICh;
+   	     
+   	     //calcular el promedio de matricula
+   	     PMCh=CMUCh/CECh;
+   	     
+   	     return CMUCh;
+  }
+   
+   	
+	
+   int matricula_8 (int EFSB, int EFCB, int EFEB, int EFMB, int EFCTB, int EFIB)
+   {
+   float CMSB, CMCB, CMEB, CMMB, CMCTB, CMIB;
+   	//Calcular el total de costo de matrícula de cada Facultad
+   	if (FAC=='a')
+   	{
+	   EFSB=EFSB+1;
+   	   CMSB=EFSB*CDMF;
+   	   return CMSB;
+   	 }  
+   	   else if (FAC=='b')
+   	   {
+		EFCB=EFCB+1;  
+   	   CMCB=EFCB*CDMF;
+   	   return CMCB;
+   	   }
+   	   else if (FAC=='c')
+   	   {
+		EFEB=EFEB+1;  
+   	   CMEB=EFEB*CDMF;
+   	   return CMEB;
+   	   }
+   	   else if (FAC=='d')
+   	   {
+		EFMB=EFMB+1;  
+   	   CMMB=EFMB*CDMF;
+   	   return CMMB;
+   	   }
+   	   else if (FAC=='e')
+   	   {
+		EFCTB=EFCTB+1;  
+   	   CMCTB=EFCTB*CDMF;
+   	   return CMCTB;
+   	   }
+   	   else if (FAC=='f')
+   	   {
+		EFIB=EFIB+1;  
+   	   CMIB=EFIB*CDMF;
+   	   return CMIB;
+		}
+   }
+   float calculate8 (int EFSB, int EFCB, int EFEB, int EFMB, int EFCTB, int EFIB, float CMSB, float CMCB, float CMEB, float CMMB, float CMCTB, float CMIB)
+   {
+   	 int CEB;
+   	 float CMUB, PMB;
+   	   //Calcular el total de estudiantes en la Universidad
+   	     CEB=EFSB+EFCB+EFEB+EFMB+EFCTB+EFIB;
+   	     
+   	     //Calcular el total de costo de matrícula de la Universidad
+   	     CMUB=CMSB+CMCB+CMEB+CMMB+CMCTB+CMIB;
+   	     
+   	     //Calcular el promedio de matricula
+   	     PMB=CMUB/CEB;	
+   	     
+   	     return CMUB;
+	} 		 
+    
+    float calculatet (float CMUS, float CMUO,  float CMUC, float CMUCl, float CMUA, float CMUV, float CMUCh, float CMUB)
+    {
+     float TCMTU;
+    //Calcular el total de matricula en la universidad
+    TCMTU=CMUS+CMUO+CMUC+CMUCl+CMUA+CMUV+CMUCh+CMUB;
+}
+
+void monto(float CM, float CMUS, float CMUO, float CMUC, float CMUCl, float CMUA, float CMUV, float CMUCh, float CMUB)
+{
+    //Cual sede/centro regional tiene el mayor monto de matricula
+    //Calcular que regional/sede tiene el mayor monto de matricula
+    if (CM>CMUO && CM>CMUC && CM>CMUCl && CM>CMUA && CM>CMUV && CM>CMUCh && CM>CMUB)
+    {
+    	CRMM="sede de Panama";
+    	TMMCR=CMUS;
+	}
+    else if (CM>CMUS && CM>CMUC && CM>CMUCl && CM>CMUA && CM>CMUV && CM>CMUCh && CM>CMUB)
+    {
+    	CRMM="Centro Regional de Panama Oeste";
+    	TMMCR=CMUO;
+	}
+    else if (CM>CMUS && CM>CMUO && CM>CMUCl && CM>CMUA && CM>CMUV && CM>CMUCh && CM>CMUB)
+    {
+    	CRMM="Centro Regional de Colon";
+    	 TMMCR=CMUC;
+	}
+    else if (CM>CMUS && CM>CMUO && CM>CMUC && CM>CMUA && CM>CMUV && CM>CMUCh && CM>CMUB)
+    {
+    	CRMM="Centro Regional de Cocle";
+    	TMMCR=CMUCl;
+	}
+    else if (CM>CMUS && CM>CMUO && CM>CMUC && CM>CMUCl && CM>CMUV && CM>CMUCh && CM>CMUB)
+    {
+    	CRMM="Centro Regional de Azuero";
+    	TMMCR=CMUA;
+	}
+    else if (CM>CMUS && CM>CMUO && CM>CMUC && CM>CMUCl && CM>CMUA && CM>CMUCh && CM>CMUB)
+    {
+    	CRMM="Centro Regional de Veraguas";
+    	 TMMCR=CMUV;
+    	 
+	}
+    else if (CM>CMUS && CM>CMUO && CM>CMUC && CM>CMUCl && CM>CMUA && CM>CMUV && CM>CMUB)
+    {	
+    	CRMM="Centro Regional de Chiriqui";
+    	TMMCR=CMUCh;
+	}
+    else if (CM>CMUS && CM>CMUO && CM>CMUC && CM>CMUCl && CM>CMUA && CM>CMUV && CM>CMUCh)
+    {
+    	CRMM="Centro Regional de Bocas del Toro";
+    	TMMCR=CMUB;
+	}
+    	
+      //Calcualar que regional/sede tiene el menor monto de matricula
+     //Cual centro sede/centro regional tiene el menor monto de matricula
+     if (CM<CMUO && CM<CMUC && CM<CMUCl && CM<CMUA && CM<CMUV && CM<CMUCh && CM<CMUB)
+     {
+        CRMeM="Sede de panama";
+		TMMeCR=CMUS;
+    }
+    else if (CM<CMUS && CM<CMUC && CM<CMUCl && CM<CMUA && CM<CMUV && CM<CMUCh && CM<CMUB)
+    {
+    	CRMeM="Centro Regional de Panama Oeste";
+		TMMeCR=CMUO;
+	}
+    else if (CM<CMUS && CM<CMUO && CM<CMUCl && CM<CMUA && CM<CMUV && CM<CMUCh && CM<CMUB)
+    {
+    	CRMeM="Centro Regional de Colon";
+    	TMMeCR=CMUC;
+	}
+    else if (CM<CMUS && CM<CMUO && CM<CMUC && CM<CMUA && CM<CMUV && CM<CMUCh && CM<CMUB)
+    {
+    	CRMeM="Centro Regional de Cocle";
+    	TMMeCR=CMUCl;
+	}
+    else if (CM<CMUS && CM<CMUO && CM<CMUC && CM<CMUCl && CM<CMUV && CM<CMUCh && CM<CMUB)
+    {
+    	CRMeM="Centro Regional de Azuero";
+    	TMMeCR=CMUA;
+	}
+    else if (CM<CMUS && CM<CMUO && CM<CMUC && CM<CMUCl && CM<CMUA && CM<CMUCh && CM<CMUB)
+    {
+    	CRMeM="Centro Regional de Veraguas";
+    	TMMeCR=CMUV;
+	}
+    else if (CM<CMUS && CM<CMUO && CM<CMUC && CM<CMUCl && CM<CMUA && CM<CMUV && CM<CMUB)
+    {
+    	CRMeM="Centro Regional de Chiriqui";
+    	TMMeCR=CMUCh;
+	}
+    else if (CM<CMUS && CM<CMUO && CM<CMUC && CM<CMUCl && CM<CMUA && CM<CMUV && CM<CMUCh)
+    {
+    	CRMeM="Centro Regional de Bocas del Toro";
+    	TMMeCR=CMUB;
+	}
+    
+}
+ 	 
+  	void students1 (int EFSS, int EFCS, int EFES, int EFMS, int EFCTS, int EFIS)
+  	{
+     cout<<"\n Sede de Panama"<<endl;
+    //Mostrar el total de estudiantes en cada Facultad
+    cout<<"\n El Total de estudiantes en cada Facultad"<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ingenieria de Sistema y Computacion es: "<<EFSS<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ingenieria Civil es: "<<EFCS<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ingenieria Electrica es: "<<EFES<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ingenieria Mecanica es: "<<EFMS<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ciencia y Tecnologia es: "<<EFCTS<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ingenieria Industrial es: "<<EFIS<<endl;
+    }
+     void matricula1 (float CMSS, float CMCS, float CMES, float CMMS, float CMCTS, float CMIS)   
+  {
+   //Mostral el total del costo de matrícula en cada Facultad
+        cout<<"\n El total de costo de matricula en cada Facultad"<<endl;
+        cout<<"El Total de costo de matricula en la Faculdad de Ingenieria de Sistema y Computacion es de B/"<<CMSS<<endl;
+        cout<<"El Total de costo de matricula en la Facultad de Ingenieria Civil es de B/"<<CMCS<<endl;
+        cout<<"El Total de costo de matricula en la Facultad de Ingenieria Electrica es de B/"<<CMES<<endl;
+        cout<<"El Total de costo de matricula en la Facultad de Ingenieria Mecanica es de B/"<<CMMS<<endl;
+        cout<<"El Total de costo de matricula en la Faultaad de Ciencia y Tecnologia es de B/"<<CMCTS<<endl;
+        cout<<"El Total de costo de matricula en la Facultad de Ingenieria Insdustrial es de B/"<<CMIS<<endl;
+    }
+   
+   void students2 (int EFSO, int EFCO, int EFEO, int EFMO, int EFCTO, int EFIO)
+        {
+        cout<<"\n Centro Regional de Panama Oeste"<<endl;
+        //Mostrar el total de estudiantes en cada Facultad
+		cout<<"\n El Total de estudiantes en cada Facultad"<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ingenieria de Sistema y Computacion es: "<<EFSO<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ingenieria Civil es: "<<EFCO<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ingenieria Electrica es: "<<EFEO<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ingenieria Mecanica es: "<<EFMO<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ciencia y Tecnologia es: "<<EFCTO<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ingenieria Industrial es: "<<EFIO<<endl;
+}
+   void matricula2 (float CMSO, float CMCO, float CMEO, float CMMO, float CMCTO, float CMIO)
+   {
+   //Mostral el total del costo de matrícula en cada Facultad
+        cout<<"\n El total de costo de matricula en cada Facultad"<<endl;
+        cout<<"El Total de costo de matricula en la Faculdad de Ingenieria de Sistema y Computacion es de B/"<<CMSO<<endl;
+        cout<<"El Total de costo de matricula en la Facultad de Ingenieria Civil es de B/"<<CMCO<<endl;
+        cout<<"El Total de costo de matricula en la Facultad de Ingenieria Electrica es de B/"<<CMEO<<endl;
+        cout<<"El Total de costo de matricula en la Facultad de Ingenieria Mecanica es de B/"<<CMMO<<endl;
+        cout<<"El Total de costo de matricula en la Faultaad de Ciencia y Tecnologia es de B/"<<CMCTO<<endl;
+        cout<<"El Total de costo de matricula en la Facultad de Ingenieria Insdustrial es de B/"<<CMIO<<endl;
+}
+
+   void students3 (int EFSC, int EFCC, int EFEC, int EFMC, int EFCTC, int EFIC)
+        {
+        cout<<"\n Centro Regional de Colon"<<endl;
+        //Mostrar el total de estudiantes en cada Facultad
+     cout<<"\n El Total de estudiantes en cada Facultad"<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ingenieria de Sistema y Computacion es: "<<EFSC<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ingenieria Civil es: "<<EFCC<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ingenieria Electrica es: "<<EFEC<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ingenieria Mecanica es: "<<EFMC<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ciencia y Tecnologia es: "<<EFCTC<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ingenieria Industrial es: "<<EFIC<<endl;
+   }
+   void matricula3 (float CMSC, float CMCC, float CMEC, float CMMC, float CMCTC, float CMIC)     
+   {
+   //Mostral el total del costo de matrícula en cada Facultad
+        cout<<"\n El total de costo de matricula en cada Facultad"<<endl;
+        cout<<"El Total de costo de matricula en la Faculdad de Ingenieria de Sistema y Computacion es de B/"<<CMSC<<endl;
+        cout<<"El Total de costo de matricula en la Facultad de Ingenieria Civil es de B/"<<CMCC<<endl;
+        cout<<"El Total de costo de matricula en la Facultad de Ingenieria Electrica es de B/"<<CMEC<<endl;
+        cout<<"El Total de costo de matricula en la Facultad de Ingenieria Mecanica es de B/"<<CMMC<<endl;
+        cout<<"El Total de costo de matricula en la Faultaad de Ciencia y Tecnologia es de B/"<<CMCTC<<endl;
+        cout<<"El Total de costo de matricula en la Facultad de Ingenieria Insdustrial es de B/"<<CMIC<<endl;
+}
+    
+   void students4 (int EFSCl, int EFCCl, int EFECl, int EFMCl, int EFCTCl, int EFICl)
+        {
+        cout<<"\n Centro Regional de Cocle"<<endl;
+        //Mostrar el total de estudiantes en cada Facultad
+      cout<<"\n El Total de estudiantes en cada Facultad"<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ingenieria de Sistema y Computacion es: "<<EFSCl<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ingenieria Civil es: "<<EFCCl<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ingenieria Electrica es: "<<EFECl<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ingenieria Mecanica es: "<<EFMCl<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ciencia y Tecnologia es: "<<EFCTCl<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ingenieria Industrial es: "<<EFICl<<endl;
+}
+   void matricula4 (float CMSCl, float CMCCl, float CMECl, float CMMCl, float CMCTCl, float CMICl)
+   {
+   //Mostral el total del costo de matrícula en cada Facultad
+        cout<<"\n El total de costo de matricula en cada Facultad"<<endl;
+        cout<<"El Total de costo de matricula en la Faculdad de Ingenieria de Sistema y Computacion es de B/"<<CMSCl<<endl;
+        cout<<"El Total de costo de matricula en la Facultad de Ingenieria Civil es de B/"<<CMCCl<<endl;
+        cout<<"El Total de costo de matricula en la Facultad de Ingenieria Electrica es de B/"<<CMECl<<endl;
+        cout<<"El Total de costo de matricula en la Facultad de Ingenieria Mecanica es de B/"<<CMMCl<<endl;
+        cout<<"El Total de costo de matricula en la Faultaad de Ciencia y Tecnologia es de B/"<<CMCTCl<<endl;
+        cout<<"El Total de costo de matricula en la Facultad de Ingenieria Insdustrial es de B/"<<CMICl<<endl;
+    }
+    
+  void students5 (int EFSA, int EFCA, int EFEA, int EFMA, int EFCTA, int EFIA)
+        {
+        cout<<"Centro Regional de Azuero"<<endl;
+        //Mostrar el total de estudiantes en cada Facultad
+    ;(cout<<"\n El Total de estudiantes en cada Facultad"<<endl);
+        cout<<"La Cantidad de estudiantes en la Facultad de Ingenieria de Sistema y Computacion es: "<<EFSA<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ingenieria Civil es: "<<EFCA<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ingenieria Electrica es: "<<EFEA<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ingenieria Mecanica es: "<<EFMA<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ciencia y Tecnologia es: "<<EFCTA<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ingenieria Industrial es: "<<EFIA<<endl;
+    }
+    void matricula5 (float CMSA, float CMCA, float CMEA, float CMMA, float CMCTA, float CMIA)    
+   {
+   //Mostral el total del costo de matrícula en cada Facultad
+        cout<<"\n El total de costo de matricula en cada Facultad"<<endl;
+        cout<<"El Total de costo de matricula en la Faculdad de Ingenieria de Sistema y Computacion es de B/"<<CMSA<<endl;
+        cout<<"El Total de costo de matricula en la Facultad de Ingenieria Civil es de B/"<<CMCA<<endl;
+        cout<<"El Total de costo de matricula en la Facultad de Ingenieria Electrica es de B/"<<CMEA<<endl;
+        cout<<"El Total de costo de matricula en la Facultad de Ingenieria Mecanica es de B/"<<CMMA<<endl;
+        cout<<"El Total de costo de matricula en la Faultaad de Ciencia y Tecnologia es de B/"<<CMCTA<<endl;
+        cout<<"El Total de costo de matricula en la Facultad de Ingenieria Insdustrial es de B/"<<CMIA<<endl;
+}
+   
+        
+        
+        void students6 (int EFSV, int EFCV, int EFEV, int EFMV, int EFCTV, int EFIV)
+      {
+         cout<<"\n Centro Regional de Veraguas";
+        //Mostrar el total de estudiantes en cada Facultad
+         cout<<"\n El Total de estudiantes en cada Facultad"<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ingenieria de Sistema y Computacion es: "<<EFSV<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ingenieria Civil es: "<<EFCV<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ingenieria Electrica es: "<<EFEV<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ingenieria Mecanica es: "<<EFMV<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ciencia y Tecnologia es: "<<EFCTV<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ingenieria Industrial es: "<<EFIV<<endl;
+    }
+    void matricula6 (float CMSV, float CMCV, float CMEV, float CMMV, float CMCTV, float CMIV)    
+   {
+   //Mostral el total del costo de matrícula en cada Facultad
+        cout<<"\n El total de costo de matricula en cada Facultad"<<endl;
+        cout<<"El Total de costo de matricula en la Faculdad de Ingenieria de Sistema y Computacion es de B/"<<CMSV<<endl;
+        cout<<"El Total de costo de matricula en la Facultad de Ingenieria Civil es de B/"<<CMCV<<endl;
+        cout<<"El Total de costo de matricula en la Facultad de Ingenieria Electrica es de B/"<<CMEV<<endl;
+        cout<<"El Total de costo de matricula en la Facultad de Ingenieria Mecanica es de B/"<<CMMV<<endl;
+        cout<<"El Total de costo de matricula en la Faultaad de Ciencia y Tecnologia es de B/"<<CMCTV<<endl;
+        cout<<"El Total de costo de matricula en la Facultad de Ingenieria Insdustrial es de B/"<<CMIV<<endl;
+}
+  
+        void students7 (int EFSCh, int EFCCh, int EFECh, int EFMCH, int EFCTCh, int ECICh)
+        {
+        cout<<"Centro Regional de Chiriquí"<<endl;
+        //Mostrar el total de estudiantes en cada Facultad
+    cout<<"\n El Total de estudiantes en cada Facultad"<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ingenieria de Sistema y Computacion es: "<<EFSCh<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ingenieria Civil es: "<<EFCCh<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ingenieria Electrica es: "<<EFECh<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ingenieria Mecanica es: "<<EFMCh<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ciencia y Tecnologia es: "<<EFCTCh<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ingenieria Industrial es: "<<EFICh<<endl;
+    }
+    void matricula7 (float CMSCh, float CMCCh, float CMECh, float CMMCh, float CMCTCh, float CMICh)    
+   {
+   //Mostral el total del costo de matrícula en cada Facultad
+        cout<<"\n El total de costo de matricula en cada Facultad"<<endl;
+        cout<<"El Total de costo de matricula en la Faculdad de Ingenieria de Sistema y Computacion es de B/"<<CMSCh<<endl;
+        cout<<"El Total de costo de matricula en la Facultad de Ingenieria Civil es de B/"<<CMCCh<<endl;
+        cout<<"El Total de costo de matricula en la Facultad de Ingenieria Electrica es de B/"<<CMECh<<endl;
+        cout<<"El Total de costo de matricula en la Facultad de Ingenieria Mecanica es de B/"<<CMMCh<<endl;
+        cout<<"El Total de costo de matricula en la Faultaad de Ciencia y Tecnologia es de B/"<<CMCTCh<<endl;
+        cout<<"El Total de costo de matricula en la Facultad de Ingenieria Insdustrial es de B/"<<CMICh<<endl;
+}
+  
+        void students8 (int EFSB, int EFCB, int EFEB, int EFMB, int EFCTB, int EFIB)
+        {
+        cout<<"Centro Regional de Bocas del Toro"<<endl;
+        //Mostrar el total de estudiantes en cada Facultad
+        cout<<"\n El Total de estudiantes en cada Facultad"<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ingenieria de Sistema y Computacion es: "<<EFSB<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ingenieria Civil es: "<<EFCB<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ingenieria Electrica es: "<<EFEB<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ingenieria Mecanica es: "<<EFMB<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ciencia y Tecnologia es: "<<EFCTB<<endl;
+        cout<<"La Cantidad de estudiantes en la Facultad de Ingenieria Industrial es: "<<EFIB<<endl;
+    }
+     void matricula8 (float CMSB, float CMCB, float CMEB, float CMMB, float CMCTB, float CMIB)   
+   {
+   //Mostral el total del costo de matrícula en cada Facultad
+        cout<<"\n El total de costo de matricula en cada Facultad"<<endl;
+        cout<<"El Total de costo de matricula en la Faculdad de Ingenieria de Sistema y Computacion es de B/"<<CMSB<<endl;
+        cout<<"El Total de costo de matricula en la Facultad de Ingenieria Civil es de B/"<<CMCB<<endl;
+        cout<<"El Total de costo de matricula en la Facultad de Ingenieria Electrica es de B/"<<CMEB<<endl;
+        cout<<"El Total de costo de matricula en la Facultad de Ingenieria Mecanica es de B/"<<CMMB<<endl;
+        cout<<"El Total de costo de matricula en la Faultaad de Ciencia y Tecnologia es de B/"<<CMCTB<<endl;
+        cout<<"El Total de costo de matricula en la Facultad de Ingenieria Insdustrial es de B/"<<CMIB<<endl;
+}
+   void students (int CES, int CEO, int CEC, int CECl, int CEA, int CEV, int CECh, int CEB)
+        {
+         //Mostrar el total de estudiantes en cada Centro Regional/Sede
+         cout<<"\n El total de estudiantes en cada Centro Regional/Sede"<<endl;
+         
+         cout<<"\n Todos los estudiantes de la Sede de Panama"<<endl;
+         cout<<"La cantidad de estudantes en la Sede es: "<<CES<<endl;
+        
+         cout<<"\n Todos los estudiantes en el Centro Regional de Panama Oeste"<<endl;
+         cout<<"La cantidad de estudantes en en el Centro Regional es: "<<CEO<<endl;
+        
+         cout<<"\n Todos los estudiantes en el Centro Regional de Colon"<<endl;
+         cout<<"La cantidad de estudantes en el Centro Regional es: "<<CEC<<endl;
+        
+         cout<<"\n Todos los estudiantes en el Centro Regional de Cocle"<<endl;
+         cout<<"La cantidad de estudantes en en Centro Regional es: "<<CECl<<endl;
+        
+         cout<<"\n Todos los estudiantes en el Centro Regional de Azuero"<<endl;
+         cout<<"La cantidad de estudantes en en Centro Regional es: "<<CEA<<endl;
+        
+         cout<<"\n Todos los estudiantes en el Cntro Regional de Veraguas"<<endl;
+         cout<<"La cantidad de estudantes en el Centro Regional es: "<<CEV<<endl;
+        
+         cout<<"\n Todos los estudiantes en el Centro Regional de Chiriqui"<<endl;
+         cout<<"La cantidad de estudantes en el Centro Regional es: "<<CECh<<endl;
+        
+         cout<<"\n Todos los estudiantes en el Centro Regional de Bocas del Toro"<<endl;
+         cout<<"La cantidad de estudantes en el Centro Regional es: "<<CEB<<endl;
+      }
+      
+    void matricula (float CMUS, float CMUO, float CMUC, float CMUCl, float CMUA, float CMUV, float CMUCh, float CMUB)
+    {
+         //Mostral el total del costo de la matrícula en cada Centro Regiona
+        cout<<"\n El total del costo de la matricula en la Sede de Panama"<<endl;
+        cout<<"El total del costo de la matricula en la Sede es de B/"<<CMUS<<endl;
+         
+         cout<<"\n El total del costo de la matricula en el Centro Regional de Panama Oeste"<<endl;
+         cout<<"El total del costo de la matricula en el Centro Regional es de B/"<<CMUO<<endl;
+         
+         cout<<"\n El total del costo de la matricula en el Centro Regional de Colon"<<endl;
+         cout<<"El total del costo de la matricula en el Centro Regional es de B/"<<CMUC<<endl;
+         
+         cout<<"\n El total del costo de la matricula en el Centro Regional de Cocle"<<endl;
+         cout<<"El total del costo de la matricula en el Centro Regional es de B/"<<CMUCl<<endl;
+         
+         cout<<"\n El total del costo de la matricula en el Centro Regional de Azuero"<<endl;
+         cout<<"El total del costo de la matricula en el Centro Regional es de B/"<<CMUA<<endl;
+         
+          cout<<"\n El total del costo de la matricula en el Centro Regional de Veraguas"<<endl;
+         cout<<"El total del costo de la matricula en el Centro Regional es de B/"<<CMUV<<endl;
+         
+          cout<<"\n El total del costo de la matricula en el Centro Regional de Chiriqui"<<endl;
+         cout<<"El total del costo de la matricula en el Centro Regional es de B/"<<CMUCh<<endl;
+         
+         cout<<"\n El total del costo de la matricula en el Centro Regional de Bocas Del Toro"<<endl;
+         cout<<"El total del costo de la matricula en el Centro Regional es de B/"<<CMUB<<endl;
+    }
+    
+        void prom (float PMS, float PMO, float PMC, float PMCl, float PMA, float PMV, float PMCh, float PMB)
+		{
+         cout<<"\n Promedio del costo de matricula por Centro Regional"<<endl;
+         cout<<"Promedio del costo de matricula en la Sede de Panama es B/."<<PMS<<endl;
+         cout<<"Promedio del costo de matricula en el Centro Regional de Panama Oeste es B/."<<PMO<<endl;
+         cout<<"Promedio del costo de matricula en el Centro Regional de Colon es B/."<<PMC<<endl;
+         cout<<"Promedio del costo de matricula en el Centro Regional de Cocle es B/."<<PMCl<<endl;
+         cout<<"Promedio del costo de matricula en el Centro Regional de Azuero es B/."<<PMA<<endl;
+         cout<<"Promedio del costo de matricula en el Centro Regional de Veraguas es B/."<<PMV<<endl;
+         cout<<"Promedio del costo de matricula en el Centro Regional de Chiriqui es B/."<<PMCh<<endl;
+         cout<<"Promedio del costo de matricula en el Centro Regional de Bocas del toro es B/."<<PMB<<endl;
+    }
+    
+        void resultf (float TCMTU, float TMMCR, float TMMeCR, string CRMM, string CRMeM)
+        {
+         cout<<"\n Total de costo de matricula de la Universidad es B/."<<TCMTU<<endl;
+         cout<<"Centro Regional con mayor monto generado en su matricula es: "<<CRMM<<" con un monto de B/."<<TMMCR<<endl;
+         cout<<"Centro Regional con menor monto generado en su matricula es: "<<CRMeM<<" con un monto de B/."<<TMMeCR<<endl;
+     }
+
+  
+  
+
+  int main () {
+  	
+  	float CM, PMS, PMO, PMC, PMCl, PMA, PMV, PMCh, PMB, CMUS, CMUO, CMUC, CMUCl, CMUA, CMUV, CMUCh, CMUB, CMSS, CMCS, CMES, CMMS, CMCTS, CMIS, CMSO, CMCO, CMEO, CMMO, CMCTO, CMIO, CMSC, CMCC, CMEC, CMMC, CMCTC, CMIC, CMSCl, CMCCl, CMECl, CMMCl, CMCTCl, CMICl, CMSA, CMCA, CMEA, CMMA, CMCTA, CMIA, CMSV, CMCV, CMEV, CMMV, CMCTV, CMIV, CMSCh, CMCCh, CMECh, CMMCh, CMCTCh, CMICh, CMSB, CMCB, CMEB, CMMB, CMCTB, CMIB;
+  	int CES, CEO, CEC, CECl, CEA, CEV, CECh, CEB;
+  	
+  	do {
+  	cout<<"\n Universidad Tecnologica de Panama"<<endl;
+ 	
+     cout<<"Ingrese la letra del Centor Regional/Sede"<<endl;
+     cout<<"a) Sede de Panama"<<endl;
+     cout<<"b) Centro Regional de Panama Oeste"<<endl;
+     cout<<"c) Centro Regional de Colon"<<endl;
+     cout<<"d) Centro Regional de Cocle"<<endl;
+     cout<<"e) Centro Regional de Azuero"<<endl;
+     cout<<"f) Centro Regional de Veraguas"<<endl;
+     cout<<"g) Centro Regional de Chiriqui"<<endl;
+     cout<<"h) Centro Regional de Bocas del Toro"<<endl;
+     cout<<"Centro Regional o Sede: "; cin>>RESE;
+  
+     	do{
+     		
+       	    cout<<"\n Ingrese la letra de la Facultad"<<endl; 
+     	    cout<<"a) Facultad de Ingenieria de Sistemas y computacion"<<endl;
+     	    cout<<"b) Facultad de Ingenieria Civil"<<endl;
+          	cout<<"c) Facultad de Ingenieria Electrica"<<endl;
+     	    cout<<"d) Facultad de Ingenieria Mecanica"<<endl;
+            cout<<"e) Facultad de Ciencia y Tecnologia"<<endl;
+            cout<<"f) Facultad de Ingenieria Industrial"<<endl;
+     	    cout<<"Facultad de: "; cin>>FAC;
+         	cout<<"Ingrese la cedula del estudiante: "; cin>>CDE;
+         	cout<<"Ingrese el nombre del estudiante: "; cin>>NE;
+         	cout<<"Ingrese el costo de la matricula de la Facultad: "; cin>>CDMF;
+   	
+          	cout<<"\n Ingrese un numero para seleccionar otra Facultad, 0 para terminar: "; cin>>Num;
+          	
+          	
+          	
+       	if (RESE =='a')
+		   {
+          CM = matricula_1 (EFSS, EFCS, EFES, EFMS, EFCTS, EFIS);
+          CMUS = calculate1 (EFSS, EFCS, EFES, EFMS, EFCTS, EFIS, CMSS, CMCS, CMES, CMMS, CMCTS, CMIS, CMUS);
+         }
+        else if (RESE =='b')
+		{
+          CM = matricula_2 (EFSO, EFCO, EFEO, EFMO, EFCTO, EFIO);
+          CMUO = calculate2 (EFSO, EFCO, EFEO, EFMO, EFCTO, EFIO, CMUO, CMSO, CMCO, CMEO, CMMO, CMCTO, CMIO);
+         } 
+        else if (RESE =='c')
+		{
+         CM = matricula_3 (EFSC, EFCC, EFEC, EFMC, EFCTC, EFIC);
+          CMUC = calculate3 (EFSC, EFCC, EFEC, EFMC, EFCTC, EFIC, CMSC, CMCC, CMEC, CMMC, CMCTC, CMIC, CMUC);
+         } 
+        else if (RESE =='d')
+		{
+          
+         CM= matricula_4 (EFSCl, EFCCl, EFECl, EFMCl, EFCTCl, EFICl);
+         CMUCl = calculate4 (EFSCl, EFCCl, EFECl, EFMCl, EFCTCl, EFICl, CMSCl, CMCCl, CMECl, CMMCl, CMCTCl, CMICl, CMUCl);
+           }
+        else if (RESE =='e')
+		{
+          CM = matricula_5 (EFSA, EFCA, EFEA, EFMA, EFCTA, EFIA);
+          CMUA = calculate5 (EFSA, EFCA, EFEA, EFMA, EFCTA, EFIA, CMSA, CMCA, CMEA, CMMA, CMCTA, CMIA, CMUA);
+          } 
+        else if (RESE =='f')
+		{
+          CM = matricula_6 (EFSV, EFCV, EFEV, EFMV, EFCTV, EFIV);
+          CMUV = calculate6 (EFSV, EFCV, EFEV, EFMV, EFCTV, EFIV, CMSV, CMCV, CMEV, CMMV, CMCTV, CMIV, CMUV);
+          }
+        else if (RESE =='g')
+		{
+          CM = matricula_7 (EFSCh, EFCCh, EFECh, EFMCh, EFCTCh, EFICh);
+          CMUCh = calculate7 (EFSCh, EFCCh, EFECh, EFMCh, EFCTCh, EFICh, CMSCh, CMCCh, CMECh, CMMCh, CMCTCh, CMICh, CMUCh);
+          }
+        else if (RESE=='h')
+		{
+         CM = matricula_8 (EFSB, EFCB, EFEB, EFMB, EFCTB, EFIB);
+         CMUB = calculate8 (EFSB, EFCB, EFEB, EFMB, EFCTB, EFIB, CMSB, CMCB, CMEB, CMMB, CMCTB, CMIB, CMUB);
+          }
+          monto (CM, CMUS, CMUO, CMUC, CMUCl, CMUA, CMUV, CMUCh, CMUB);
+    	    
+  } while (Num!=0);
+  
+  if (Num==0) {
+     cout<<"\n Ingrese un numero para seleccionar otra sede/regional, 0 para finalizar: "; cin>>Num2;
+ }
+  } while (Num2!=0);
+  
+         students1 (EFSS, EFCS, EFES, EFMS, EFCTS, EFIS);
+         matricula1 (CMSS, CMCS, CMES, CMMS, CMCTS, CMIS);
+         students2 (EFSO, EFCO, EFEO, EFMO, EFCTO, EFIO);
+         matricula2 (CMSO, CMCO, CMEO, CMMO, CMCTO, CMIO);
+         students3 (EFSC, EFCC, EFEC, EFMC, EFCTC, EFIC);
+         matricula3 (CMSC, CMCC, CMEC, CMMC, CMCTC, CMIC);
+         students4 (EFSCl, EFCCl, EFECl, EFMCl, EFCTCl, EFICl);
+         matricula4 (CMSCl, CMCCl, CMECl, CMMCl, CMCTCl, CMICl);
+         students5 (EFSA, EFCA, EFEA, EFMA, EFCTA, EFIA);
+         matricula5 (CMSA, CMCA, CMEA, CMMA, CMCTA, CMIA);
+         students6 (EFSV, EFCV, EFEV, EFMV, EFCTV, EFIV);
+         matricula6 (CMSV, CMCV, CMEV, CMMV, CMCTV, CMIV);
+         students7 (EFSCh, EFCCh, EFECh, EFMCh, EFCTCh, EFICh);
+         matricula7 (CMSCh, CMCCh, CMECh, CMMCh, CMCTCh, CMICh);
+         students8 (EFSB, EFCB, EFEB, EFMB, EFCTB, EFIB);
+         matricula8 (CMSB, CMCB, CMEB, CMMB, CMCTB, CMIB);
+         students (CES, CES, CEC, CECl, CEA, CEV, CECh, CEB);
+         matricula (CMUS, CMUO, CMUC, CMUCl, CMUA, CMUV, CMUCh, CMUB);
+         prom (PMS, PMO, PMC, PMCl, PMA, PMV, PMCh, PMB);
+  	     resultf (TCMTU, TMMCR, TMMeCR, CRMM, CRMeM);
+  
+    return 0;
+}
